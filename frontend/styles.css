@@ -1,0 +1,196 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000; /* Pure black background */
+    color: #FFFFFF; /* White text */
+    font-family: Arial, sans-serif;
+    font-size: 1.1em; /* Slightly larger font size */
+    line-height: 1.8; /* Proper line spacing */
+    margin: 0;
+}
+
+/* Wrapper to center content and limit width */
+.container {
+    max-width: 75%; /* Limit width to 75% of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    margin-top: 1.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #007BFF; /* Blue underline for headings */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size:2em;
+}
+
+p {
+    margin-bottom: 1.5em;
+    font-size:1.3em;
+}
+
+a {
+    color: #007BFF; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Code Formatting */
+pre {
+    background-color: #1E1E1E; /* Dark background for code blocks */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: "Courier New", monospace; /* Monospaced font */
+    font-size: 1.5em;
+}
+
+.property {
+    color: #FF69B4; /* Pink for CSS properties */
+    font-size: 1.5em;
+}
+
+.value {
+    color: #32CD32; /* Green for CSS values */
+    font-size: 1.5em;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 2.5em;
+}
+
+.section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.section li {
+    margin-bottom: 0.5em;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative; /* For positioning the mobile menu */
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px; /* Adjusted for smaller screens */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Align items to the right */
+    flex-grow: 1; /* Allow the ul to take up remaining space */
+}
+
+.navbar ul li {
+    margin: 0 20px; /* Adjusted spacing for smaller screens */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Make navbar items bold */
+    font-size: 1.1em; /* Slightly larger font size for navbar items */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px; /* Adjusted for smaller screens */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar ul li {
+        margin: 0 15px; /* Reduce spacing for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide the navbar items on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show the navbar items when active */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Adjust spacing for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    .navbar .logo {
+        margin-left: 10px; /* Adjusted for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+
+    .navbar .logo {
+        font-size: 1.2em; /* Smaller logo for mobile */
+    }
+
+    .container {
+        max-width: 90%; /* Increase width for smaller screens */
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}

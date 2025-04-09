@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Documentation</title>
+    <link rel="stylesheet" href="/frontend/styles.css"> <!-- Link to the same CSS file -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">VPTECH</div>
+        <ul id="nav-menu">
+            <li><a href="/frontend/html.html">HTML</a></li>
+            <li><a href="/frontend/css.html">CSS</a></li>
+            <li><a href="/frontend/javscript.html">Javascript</a></li>
+            <li><a href="/frontend/react.html">React</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 id="introduction">HTML Documentation</h1>
+
+        <!-- Introduction -->
+        <div class="section">
+            <h2>1. Introduction to HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Learn More on MDN</a>
+        </div>
+
+        <!-- Basic Structure -->
+        <div class="section">
+            <h2 id="structure">2. Basic Structure of an HTML Document</h2>
+            <pre>
+                <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+            </pre>
+        </div>
+
+        <!-- Common HTML Tags -->
+        <div class="section">
+            <h2 id="tags">3. Common HTML Tags</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">Head</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">Body</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1">Headings</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">Paragraph</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">Links</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Images</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">Divs</a></li>
+            </ul>
+        </div>
+
+        <!-- Forms & Input Elements -->
+        <div class="section">
+            <h2 id="forms">4. Forms & Input Elements</h2>
+            <p>Forms allow users to submit data.</p>
+            <pre>
+                <code>&lt;form&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code>
+            </pre>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">Learn More</a>
+        </div>
+
+        <!-- Tables -->
+        <div class="section">
+            <h2 id="tables">5. Tables</h2>
+            <p>Tables are used to display data in rows and columns.</p>
+            <pre>
+                <code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+            </pre>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Learn More</a>
+        </div>
+
+        <!-- Multimedia -->
+        <div class="section">
+            <h2 id="multimedia">6. Multimedia (Audio & Video)</h2>
+            <pre>
+                <code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code>
+            </pre>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">Learn More</a>
+        </div>
+
+        <!-- Semantic HTML -->
+        <div class="section">
+            <h2 id="semantic">7. Semantic HTML</h2>
+            <p>Semantic elements improve accessibility and SEO.</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">Header</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">Nav</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">Article</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">Footer</a></li>
+            </ul>
+        </div>
+
+        <!-- HTML5 Features -->
+        <div class="section">
+            <h2 id="html5">8. HTML5 Features</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">Canvas</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg">SVG</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">Datalist</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">Details</a></li>
+            </ul>
+        </div>
+
+        <!-- Accessibility & SEO -->
+        <div class="section">
+            <h2 id="accessibility">9. Accessibility & SEO Best Practices</h2>
+            <ul>
+                <li>Use proper headings (H1-H6) in order.</li>
+                <li>Add `alt` attributes to images.</li>
+                <li>Use `<nav>` for navigation menus.</li>
+                <li>Use `<footer>` for page footers.</li>
+            </ul>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="section">
+            <h2 id="conclusion">10. Conclusion</h2>
+            <p>HTML is the foundation of web development. Learning it thoroughly helps in better web design and user experience.</p>
+        </div>
+    </div>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script src="/frontend/script1.js">
+     
+    </script>
+</body>
+</html>

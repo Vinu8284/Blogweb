@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the same CSS file -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">VPTECH</div>
+      <ul id="nav-menu">
+        <li><a href="/frontend/html.html">HTML</a></li>
+        <li><a href="/frontend/css.html">CSS</a></li>
+        <li><a href="/frontend/javscript.html">Javascript</a></li>
+        <li><a href="/frontend/react.html">React</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="container">
+      <h1>React Documentation</h1>
+
+      <!-- Introduction -->
+      <div class="section">
+        <h2>1. Introduction to React</h2>
+        <p>
+          React is a JavaScript library for building user interfaces. It allows
+          you to create reusable UI components and manage the state of your
+          application efficiently.
+        </p>
+        <a href="https://reactjs.org/docs/getting-started.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- JSX -->
+      <div class="section">
+        <h2>2. JSX</h2>
+        <p>
+          JSX is a syntax extension for JavaScript that allows you to write
+          HTML-like code in your JavaScript files.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> element = <span class="value">&lt;h1&gt;Hello, World!&lt;/h1&gt;</span>;
+        </code></pre>
+        <a href="https://reactjs.org/docs/introducing-jsx.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Components -->
+      <div class="section">
+        <h2>3. Components</h2>
+        <p>
+          Components are the building blocks of a React application. They can be
+          functional or class-based.
+        </p>
+        <pre><code>
+<span class="comment">// Functional Component</span>
+<span class="keyword">function</span> Welcome(props) {
+    <span class="keyword">return</span> <span class="value">&lt;h1&gt;Hello, {props.name}&lt;/h1&gt;</span>;
+}
+
+<span class="comment">// Class Component</span>
+<span class="keyword">class</span> Welcome <span class="keyword">extends</span> React.Component {
+    render() {
+        <span class="keyword">return</span> <span class="value">&lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;</span>;
+    }
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/components-and-props.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Props -->
+      <div class="section">
+        <h2>4. Props</h2>
+        <p>
+          Props (short for properties) are used to pass data from a parent
+          component to a child component.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> Welcome(props) {
+    <span class="keyword">return</span> <span class="value">&lt;h1&gt;Hello, {props.name}&lt;/h1&gt;</span>;
+}
+
+<span class="keyword">const</span> element = <span class="value">&lt;Welcome name="John" /&gt;</span>;
+        </code></pre>
+        <a href="https://reactjs.org/docs/components-and-props.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- State -->
+      <div class="section">
+        <h2>5. State</h2>
+        <p>
+          State is used to manage data that changes over time within a
+          component.
+        </p>
+        <pre><code>
+<span class="keyword">class</span> Clock <span class="keyword">extends</span> React.Component {
+    <span class="keyword">constructor</span>(props) {
+        <span class="keyword">super</span>(props);
+        <span class="keyword">this</span>.state = { date: <span class="keyword">new</span> Date() };
+    }
+
+    render() {
+        <span class="keyword">return</span> (
+            <span class="value">&lt;div&gt;
+                &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                &lt;h2&gt;It is {this.state.date.toLocaleTimeString()}.&lt;/h2&gt;
+            &lt;/div&gt;</span>
+        );
+    }
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/state-and-lifecycle.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Hooks -->
+      <div class="section">
+        <h2>6. Hooks</h2>
+        <p>
+          Hooks allow you to use state and other React features in functional
+          components.
+        </p>
+        <pre><code>
+<span class="keyword">import</span> React, { useState } <span class="keyword">from</span> <span class="value">"react"</span>;
+
+<span class="keyword">function</span> Counter() {
+    <span class="keyword">const</span> [count, setCount] = useState(<span class="value">0</span>);
+
+    <span class="keyword">return</span> (
+        <span class="value">&lt;div&gt;
+            &lt;p&gt;You clicked {count} times&lt;/p&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;
+                Click me
+            &lt;/button&gt;
+        &lt;/div&gt;</span>
+    );
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/hooks-intro.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Event Handling -->
+      <div class="section">
+        <h2>7. Event Handling</h2>
+        <p>
+          React events are named using camelCase and are passed as functions
+          rather than strings.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> ActionButton() {
+    <span class="keyword">function</span> handleClick() {
+        console.log(<span class="value">"Button clicked!"</span>);
+    }
+
+    <span class="keyword">return</span> (
+        <span class="value">&lt;button onClick={handleClick}&gt;
+            Click me
+        &lt;/button&gt;</span>
+    );
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/handling-events.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Conditional Rendering -->
+      <div class="section">
+        <h2>8. Conditional Rendering</h2>
+        <p>
+          You can conditionally render elements in React using JavaScript
+          operators like <code class="keyword">if</code> or the ternary
+          operator.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> Greeting(props) {
+    <span class="keyword">const</span> isLoggedIn = props.isLoggedIn;
+    <span class="keyword">return</span> (
+        <span class="value">&lt;div&gt;
+            {isLoggedIn ? (
+                &lt;h1&gt;Welcome back!&lt;/h1&gt;
+            ) : (
+                &lt;h1&gt;Please sign up.&lt;/h1&gt;
+            )}
+        &lt;/div&gt;</span>
+    );
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/conditional-rendering.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Lists and Keys -->
+      <div class="section">
+        <h2>9. Lists and Keys</h2>
+        <p>
+          Use the <code class="keyword">map</code> function to render lists of
+          elements. Keys help React identify which items have changed.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> numbers = [<span class="value">1</span>, <span class="value">2</span>, <span class="value">3</span>, <span class="value">4</span>, <span class="value">5</span>];
+<span class="keyword">const</span> listItems = numbers.map((number) =>
+    <span class="value">&lt;li key={number.toString()}&gt;{number}&lt;/li&gt;</span>
+);
+
+<span class="keyword">return</span> <span class="value">&lt;ul&gt;{listItems}&lt;/ul&gt;</span>;
+        </code></pre>
+        <a href="https://reactjs.org/docs/lists-and-keys.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Forms -->
+      <div class="section">
+        <h2>10. Forms</h2>
+        <p>
+          React forms are controlled components, meaning their state is managed
+          by React.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> NameForm() {
+    <span class="keyword">const</span> [name, setName] = useState(<span class="value">""</span>);
+
+    <span class="keyword">function</span> handleSubmit(event) {
+        alert(<span class="value">`A name was submitted: ${name}`</span>);
+        event.preventDefault();
+    }
+
+    <span class="keyword">return</span> (
+        <span class="value">&lt;form onSubmit={handleSubmit}&gt;
+            &lt;label&gt;
+                Name:
+                &lt;input type="text" value={name} onChange={(e) => setName(e.target.value)} /&gt;
+            &lt;/label&gt;
+            &lt;input type="submit" value="Submit" /&gt;
+        &lt;/form&gt;</span>
+    );
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/forms.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- Context API -->
+      <div class="section">
+        <h2>11. Context API</h2>
+        <p>
+          The Context API allows you to share data across the component tree
+          without passing props manually.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> ThemeContext = React.createContext(<span class="value">"light"</span>);
+
+<span class="keyword">function</span> App() {
+    <span class="keyword">return</span> (
+        <span class="value">&lt;ThemeContext.Provider value="dark"&gt;
+            &lt;Toolbar /&gt;
+        &lt;/ThemeContext.Provider&gt;</span>
+    );
+}
+
+<span class="keyword">function</span> Toolbar() {
+    <span class="keyword">return</span> (
+        <span class="value">&lt;div&gt;
+            &lt;ThemedButton /&gt;
+        &lt;/div&gt;</span>
+    );
+}
+
+<span class="keyword">function</span> ThemedButton() {
+    <span class="keyword">const</span> theme = useContext(ThemeContext);
+    <span class="keyword">return</span> <span class="value">&lt;button style={{ background: theme }}&gt;Themed Button&lt;/button&gt;</span>;
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/context.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+
+      <!-- React Router -->
+      <div class="section">
+        <h2>12. React Router</h2>
+        <p>
+          React Router is used for navigation and routing in React applications.
+        </p>
+        <pre><code>
+<span class="keyword">import</span> { BrowserRouter as Router, Route, Switch } <span class="keyword">from</span> <span class="value">"react-router-dom"</span>;
+
+<span class="keyword">function</span> App() {
+    <span class="keyword">return</span> (
+        <span class="value">&lt;Router&gt;
+            &lt;Switch&gt;
+                &lt;Route path="/about"&gt;
+                    &lt;About /&gt;
+                &lt;/Route&gt;
+                &lt;Route path="/"&gt;
+                    &lt;Home /&gt;
+                &lt;/Route&gt;
+            &lt;/Switch&gt;
+        &lt;/Router&gt;</span>
+    );
+}
+        </code></pre>
+        <a href="https://reactrouter.com/">Learn More on React Router Docs</a>
+      </div>
+
+      <!-- Advanced Topics -->
+      <div class="section">
+        <h2>13. Advanced Topics</h2>
+        <h3>Higher-Order Components (HOC)</h3>
+        <p>
+          HOCs are functions that take a component and return a new component
+          with additional props or functionality.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> withLogging(WrappedComponent) {
+    <span class="keyword">return</span> <span class="keyword">function</span>(props) {
+        console.log(<span class="value">"Rendering:"</span>, WrappedComponent.name);
+        <span class="keyword">return</span> <span class="value">&lt;WrappedComponent {...props} /&gt;</span>;
+    };
+}
+        </code></pre>
+        <a href="https://reactjs.org/docs/higher-order-components.html"
+          >Learn More on React Docs</a
+        >
+
+        <h3>Performance Optimization</h3>
+        <p>
+          Use <code class="keyword">React.memo</code> and
+          <code class="keyword">useMemo</code> to optimize performance.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> MemoizedComponent = React.memo(<span class="keyword">function</span> MyComponent(props) {
+    <span class="comment">/* Render using props */</span>
+});
+
+<span class="keyword">const</span> memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+        </code></pre>
+        <a href="https://reactjs.org/docs/optimizing-performance.html"
+          >Learn More on React Docs</a
+        >
+      </div>
+    </div>
+    <script src="/frontend/script1.js"></script>
+  </body>
+</html>

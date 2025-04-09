@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the same CSS file -->
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">VPTECH</div>
+      <ul id="nav-menu">
+        <li><a href="/frontend/html.html">HTML</a></li>
+        <li><a href="/frontend/css.html">CSS</a></li>
+        <li><a href="/frontend/javscript.html">Javascript</a></li>
+        <li><a href="/frontend/react.html">React</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="container">
+      <h1>JavaScript Documentation</h1>
+
+      <!-- Introduction -->
+      <div class="section">
+        <h2>1. Introduction to JavaScript</h2>
+        <p>
+          JavaScript is a high-level, interpreted programming language used to
+          make web pages interactive. It is one of the core technologies of the
+          web, alongside HTML and CSS.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Variables -->
+      <div class="section">
+        <h2>2. Variables</h2>
+        <p>
+          Variables are used to store data. JavaScript has three ways to declare
+          variables: <code class="keyword">var</code>,
+          <code class="keyword">let</code>, and
+          <code class="keyword">const</code>.
+        </p>
+        <pre><code>
+<span class="keyword">let</span> name = <span class="value">"John"</span>; <span class="comment">// Mutable variable</span>
+<span class="keyword">const</span> age = <span class="value">25</span>; <span class="comment">// Immutable variable</span>
+<span class="keyword">var</span> isOld = <span class="value">false</span>; <span class="comment">// Avoid using var (legacy)</span>
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Data Types -->
+      <div class="section">
+        <h2>3. Data Types</h2>
+        <p>JavaScript has dynamic types. The most common data types are:</p>
+        <ul>
+          <li>
+            <code class="keyword">String</code>:
+            <code class="value">"Hello, World!"</code>
+          </li>
+          <li>
+            <code class="keyword">Number</code>: <code class="value">42</code>
+          </li>
+          <li>
+            <code class="keyword">Boolean</code>:
+            <code class="value">true</code> or <code class="value">false</code>
+          </li>
+          <li>
+            <code class="keyword">Array</code>:
+            <code class="value">[1, 2, 3]</code>
+          </li>
+          <li>
+            <code class="keyword">Object</code>:
+            <code class="value">{ name: "John", age: 25 }</code>
+          </li>
+        </ul>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Functions -->
+      <div class="section">
+        <h2>4. Functions</h2>
+        <p>
+          Functions are reusable blocks of code. They can be declared using the
+          <code class="keyword">function</code> keyword or as arrow functions.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> greet(name) {
+    <span class="keyword">return</span> <span class="value">`Hello, ${name}!`</span>;
+}
+
+<span class="comment">// Arrow function</span>
+<span class="keyword">const</span> greet = (name) => <span class="value">`Hello, ${name}!`</span>;
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Loops -->
+      <div class="section">
+        <h2>5. Loops</h2>
+        <p>
+          Loops are used to execute a block of code repeatedly. Common loops
+          include <code class="keyword">for</code>,
+          <code class="keyword">while</code>, and
+          <code class="keyword">for...of</code>.
+        </p>
+        <pre><code>
+<span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="value">0</span>; i < <span class="value">5</span>; i++) {
+    console.log(i);
+}
+
+<span class="keyword">const</span> numbers = [<span class="value">1</span>, <span class="value">2</span>, <span class="value">3</span>];
+<span class="keyword">for</span> (<span class="keyword">const</span> num <span class="keyword">of</span> numbers) {
+    console.log(num);
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Conditionals -->
+      <div class="section">
+        <h2>6. Conditionals</h2>
+        <p>
+          Conditionals are used to execute code based on certain conditions.
+          Common conditionals include <code class="keyword">if</code>,
+          <code class="keyword">else</code>, and
+          <code class="keyword">switch</code>.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> age = <span class="value">18</span>;
+<span class="keyword">if</span> (age >= <span class="value">18</span>) {
+    console.log(<span class="value">"You are an adult."</span>);
+} <span class="keyword">else</span> {
+    console.log(<span class="value">"You are a minor."</span>);
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- DOM Manipulation -->
+      <div class="section">
+        <h2>7. DOM Manipulation</h2>
+        <p>
+          The Document Object Model (DOM) allows JavaScript to interact with
+          HTML elements.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> element = document.querySelector(<span class="value">"#myElement"</span>);
+element.textContent = <span class="value">"Hello, DOM!"</span>;
+element.style.color = <span class="value">"#007BFF"</span>;
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- ES6 Features -->
+      <div class="section">
+        <h2>8. ES6 Features</h2>
+        <p>
+          ES6 introduced many new features, including arrow functions, template
+          literals, and destructuring.
+        </p>
+        <pre><code>
+<span class="comment">// Arrow function</span>
+<span class="keyword">const</span> add = (a, b) => a + b;
+
+<span class="comment">// Template literals</span>
+<span class="keyword">const</span> name = <span class="value">"John"</span>;
+console.log(<span class="value">`Hello, ${name}!`</span>);
+
+<span class="comment">// Destructuring</span>
+<span class="keyword">const</span> person = { name: <span class="value">"John"</span>, age: <span class="value">25</span> };
+<span class="keyword">const</span> { name, age } = person;
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Async/Await -->
+      <div class="section">
+        <h2>9. Async/Await</h2>
+        <p>
+          <code class="keyword">async</code> and
+          <code class="keyword">await</code> make asynchronous code easier to
+          write and read.
+        </p>
+        <pre><code>
+<span class="keyword">async</span> <span class="keyword">function</span> fetchData() {
+    <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(<span class="value">"https://api.example.com/data"</span>);
+    <span class="keyword">const</span> data = <span class="keyword">await</span> response.json();
+    console.log(data);
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Promises -->
+      <div class="section">
+        <h2>10. Promises</h2>
+        <p>Promises are used to handle asynchronous operations.</p>
+        <pre><code>
+<span class="keyword">const</span> promise = <span class="keyword">new</span> Promise((resolve, reject) => {
+    <span class="keyword">if</span> (success) {
+        resolve(<span class="value">"Success!"</span>);
+    } <span class="keyword">else</span> {
+        reject(<span class="value">"Failure!"</span>);
+    }
+});
+
+promise.then((result) => console.log(result))
+       .catch((error) => console.error(error));
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Event Handling -->
+      <div class="section">
+        <h2>11. Event Handling</h2>
+        <p>
+          JavaScript can respond to user actions like clicks, keypresses, and
+          more.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> button = document.querySelector(<span class="value">"#myButton"</span>);
+button.addEventListener(<span class="value">"click"</span>, () => {
+    console.log(<span class="value">"Button clicked!"</span>);
+});
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Modules -->
+      <div class="section">
+        <h2>12. Modules</h2>
+        <p>JavaScript modules allow you to split code into reusable pieces.</p>
+        <pre><code>
+<span class="comment">// math.js</span>
+<span class="keyword">export</span> <span class="keyword">const</span> add = (a, b) => a + b;
+
+<span class="comment">// main.js</span>
+<span class="keyword">import</span> { add } <span class="keyword">from</span> <span class="value">"./math.js"</span>;
+console.log(add(<span class="value">2</span>, <span class="value">3</span>));
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- OOP Concepts -->
+      <div class="section">
+        <h2>13. OOP Concepts</h2>
+        <p>
+          JavaScript supports object-oriented programming with classes and
+          inheritance.
+        </p>
+        <pre><code>
+<span class="keyword">class</span> Animal {
+    <span class="keyword">constructor</span>(name) {
+        <span class="keyword">this</span>.name = name;
+    }
+
+    speak() {
+        console.log(<span class="value">`${this.name} makes a noise.`</span>);
+    }
+}
+
+<span class="keyword">class</span> Dog <span class="keyword">extends</span> Animal {
+    speak() {
+        console.log(<span class="value">`${this.name} barks.`</span>);
+    }
+}
+
+<span class="keyword">const</span> dog = <span class="keyword">new</span> Dog(<span class="value">"Rex"</span>);
+dog.speak();
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Advanced Topics -->
+      <div class="section">
+        <h2>14. Advanced Topics</h2>
+        <h3>Closures</h3>
+        <p>
+          A closure is a function that retains access to its lexical scope, even
+          when the function is executed outside that scope.
+        </p>
+        <pre><code>
+<span class="keyword">function</span> outer() {
+    <span class="keyword">const</span> message = <span class="value">"Hello"</span>;
+    <span class="keyword">function</span> inner() {
+        console.log(message);
+    }
+    <span class="keyword">return</span> inner;
+}
+
+<span class="keyword">const</span> innerFunc = outer();
+innerFunc(); <span class="comment">// Logs "Hello"</span>
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
+          >Learn More on MDN</a
+        >
+
+        <h3>Prototypes</h3>
+        <p>
+          JavaScript uses prototypal inheritance, where objects can inherit
+          properties and methods from other objects.
+        </p>
+        <pre><code>
+<span class="keyword">const</span> person = {
+    greet() {
+        console.log(<span class="value">"Hello!"</span>);
+    }
+};
+
+<span class="keyword">const</span> john = Object.create(person);
+john.greet(); <span class="comment">// Logs "Hello!"</span>
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+          >Learn More on MDN</a
+        >
+
+        <h3>Performance Optimization</h3>
+        <p>
+          Optimize JavaScript performance by minimizing reflows, using Web
+          Workers, and avoiding blocking the main thread.
+        </p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"
+          >Learn More on MDN</a
+        >
+      </div>
+    </div>
+    <script src="/frontend/script1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Documentation</title>
+    <link rel="stylesheet" href="/frontend/styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">VPTECH</div>
+      <ul id="nav-menu">
+        <li><a href="/frontend/html.html">HTML</a></li>
+        <li><a href="/frontend/css.html">CSS</a></li>
+        <li><a href="/frontend/javscript.html">Javascript</a></li>
+        <li><a href="/frontend/react.html">React</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+    <div class="container">
+      <h1>CSS Documentation</h1>
+
+      <!-- Introduction -->
+      <div class="section">
+        <h2>1. Introduction to CSS</h2>
+        <p>
+          CSS (Cascading Style Sheets) is a stylesheet language used to describe
+          the presentation of a document written in HTML or XML. It controls the
+          layout, colors, fonts, and overall visual appearance of a webpage.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Selectors -->
+      <div class="section">
+        <h2>2. Selectors</h2>
+        <p>
+          CSS selectors are used to target HTML elements for styling. Common
+          selectors include:
+        </p>
+        <ul>
+          <li>Element Selector: <code class="property">p</code></li>
+          <li>Class Selector: <code class="property">.class-name</code></li>
+          <li>ID Selector: <code class="property">#id-name</code></li>
+          <li>
+            Attribute Selector: <code class="property">[type="text"]</code>
+          </li>
+        </ul>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Box Model -->
+      <div class="section">
+        <h2>3. Box Model</h2>
+        <p>The CSS box model describes the structure of elements, including:</p>
+        <ul>
+          <li>
+            <code class="property">margin</code>: Space outside the element.
+          </li>
+          <li>
+            <code class="property">border</code>: Border around the element.
+          </li>
+          <li>
+            <code class="property">padding</code>: Space inside the element,
+            around the content.
+          </li>
+          <li>
+            <code class="property">content</code>: The actual content of the
+            element.
+          </li>
+        </ul>
+        <pre><code>
+.box {
+    <span class="property">margin</span>: <span class="value">10px</span>;
+    <span class="property">border</span>: <span class="value">2px solid #007BFF</span>;
+    <span class="property">padding</span>: <span class="value">20px</span>;
+    <span class="property">width</span>: <span class="value">200px</span>;
+}
+        </code></pre>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Flexbox -->
+      <div class="section">
+        <h2>4. Flexbox</h2>
+        <p>
+          Flexbox is a layout model that allows you to design flexible and
+          responsive layouts.
+        </p>
+        <pre><code>
+.container {
+    <span class="property">display</span>: <span class="value">flex</span>;
+    <span class="property">justify-content</span>: <span class="value">center</span>;
+    <span class="property">align-items</span>: <span class="value">center</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Grid -->
+      <div class="section">
+        <h2>5. CSS Grid</h2>
+        <p>
+          CSS Grid is a two-dimensional layout system for creating complex
+          grid-based designs.
+        </p>
+        <pre><code>
+.grid-container {
+    <span class="property">display</span>: <span class="value">grid</span>;
+    <span class="property">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;
+    <span class="property">gap</span>: <span class="value">10px</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Animations -->
+      <div class="section">
+        <h2>6. Animations</h2>
+        <p>CSS animations allow you to animate transitions between styles.</p>
+        <pre><code>
+@keyframes slide {
+    <span class="value">0%</span> { <span class="property">transform</span>: <span class="value">translateX(0)</span>; }
+    <span class="value">100%</span> { <span class="property">transform</span>: <span class="value">translateX(100px)</span>; }
+}
+
+.box {
+    <span class="property">animation</span>: <span class="value">slide 2s infinite</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Transitions -->
+      <div class="section">
+        <h2>7. Transitions</h2>
+        <p>CSS transitions enable smooth changes between property values.</p>
+        <pre><code>
+.button {
+    <span class="property">transition</span>: <span class="value">background-color 0.3s ease</span>;
+}
+
+.button:hover {
+    <span class="property">background-color</span>: <span class="value">#007BFF</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Pseudo-classes -->
+      <div class="section">
+        <h2>8. Pseudo-classes</h2>
+        <p>Pseudo-classes are used to define special states of elements.</p>
+        <pre><code>
+a<span class="property">:hover</span> {
+    <span class="property">color</span>: <span class="value">#FF69B4</span>;
+}
+
+li<span class="property">:nth-child(odd)</span> {
+    <span class="property">background-color</span>: <span class="value">#333</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Variables -->
+      <div class="section">
+        <h2>9. CSS Variables</h2>
+        <p>CSS variables allow you to store reusable values.</p>
+        <pre><code>
+<span class="property">:root</span> {
+    <span class="property">--primary-color</span>: <span class="value">#007BFF</span>;
+}
+
+.button {
+    <span class="property">background-color</span>: <span class="value">var(--primary-color)</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Responsive Design -->
+      <div class="section">
+        <h2>10. Responsive Design</h2>
+        <p>Use media queries to create responsive layouts.</p>
+        <pre><code>
+@media (max-width: 768px) {
+    .container {
+        <span class="property">flex-direction</span>: <span class="value">column</span>;
+    }
+}
+        </code></pre>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries"
+          >Learn More on MDN</a
+        >
+      </div>
+
+      <!-- Advanced: CSS Preprocessors -->
+      <div class="section">
+        <h2>11. CSS Preprocessors (SASS/LESS)</h2>
+        <p>
+          Preprocessors like SASS and LESS extend CSS with features like
+          variables, nesting, and mixins.
+        </p>
+        <pre><code>
+<span class="property">$primary-color</span>: <span class="value">#007BFF</span>;
+
+.button {
+    <span class="property">background-color</span>: <span class="value">$primary-color</span>;
+}
+        </code></pre>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/CSS_preprocessor"
+          >Learn More on MDN</a
+        >
+      </div>
+    </div>
+    <script src="/frontend/script1.js"></script>
+  </body>
+</html>
