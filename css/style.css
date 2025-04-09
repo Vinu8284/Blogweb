@@ -1,17 +1,19 @@
 
 
 body {
-  background: linear-gradient(135deg, #667eea, #f7f5fa);
-  color: #4e4e4e;
+  background: linear-gradient(135deg, #f7f7fa, #f0e7d7);
+  color: #131313;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
   color: #1e1e1e;
+}
+h5{
+  color: white;
 }
 
 a {
@@ -81,7 +83,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #0078ff;
+  background-color: transparent;
 }
 
 .overlay-mf {
@@ -317,7 +319,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #0078ff;
+  background: #75acec;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -739,7 +741,7 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #5fa3ec;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -906,7 +908,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0078ff;
+  background-color: #e0e5eb;
   border-radius: 4px;
 }
 
@@ -925,7 +927,7 @@ a:hover {
 }
 
 .card-blog .card-description {
-  color: #4e4e4e;
+  color: #faf7f7;
 }
 
 .card-blog .post-author {
@@ -933,7 +935,7 @@ a:hover {
 }
 
 .card-blog .post-date {
-  color: #4e4e4e;
+  color: #fbf6f6;
   display: inline-block;
   float: right;
 }
@@ -982,6 +984,9 @@ a:hover {
   padding: 18px;
   font-style: italic;
 }
+.getouch{
+  color: white;
+}
 
 /*------/ Comments /------*/
 
@@ -1014,7 +1019,7 @@ a:hover {
 }
 
 .box-comments .list-comments span {
-  color: #1e1e1e;
+  color: #f0ecec;
   font-style: italic;
 }
 
@@ -1055,7 +1060,7 @@ a:hover {
 }
 
 .sidebar-search .btn-search {
-  background-color: #0078ff;
+  background-color: #5a85db;
   border-color: #0078ff;
   border-radius: 0;
   padding-left: 20px;
@@ -1064,7 +1069,7 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #0078ff;
+  background-color: #75dc86;
   padding: .2rem .6rem;
   margin-bottom: .5rem;
   border-radius: 15px;
