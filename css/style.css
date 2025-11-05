@@ -513,7 +513,7 @@ a:hover {
 
 /* Site logo image sizing (used when replacing textual brand with image) */
 .site-logo {
-  height: 44px;
+  height: 72px; /* increased size for main site */
   width: auto;
   display: inline-block;
   vertical-align: middle;
@@ -521,7 +521,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .site-logo {
-    height: 36px;
+    height: 56px; /* mobile size */
   }
 }
 

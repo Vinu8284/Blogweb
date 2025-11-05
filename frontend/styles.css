@@ -108,17 +108,17 @@ code {
     margin-left: 20px; /* Adjusted for smaller screens */
 }
 
-/* Image logo styling */
+/* Image logo styling (larger, and transparent via SVG) */
 .navbar .logo img,
 .site-logo {
-    height: 40px; /* Default logo height */
+    height: 72px; /* Larger logo height */
     width: auto;
     display: block;
 }
 
 @media (max-width: 768px) {
     .site-logo {
-        height: 34px; /* Slightly smaller on mobile */
+        height: 56px; /* Slightly smaller on mobile */
     }
 }
 

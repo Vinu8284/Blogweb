@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" role="img" aria-labelledby="title">
+  <title id="title">VN tech logo</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0078FF"/>
+      <stop offset="100%" stop-color="#00C2FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Transparent background by design -->
+  <g fill="none" fill-rule="evenodd">
+    <!-- Decorative mark (V inside circle) -->
+    <circle cx="60" cy="60" r="48" fill="url(#g)" />
+    <path d="M40 78 L58 46 L74 78" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Wordmark -->
+    <g transform="translate(120,76)">
+      <text x="0" y="0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#1B1B1B">VN</text>
+      <text x="80" y="0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#1B1B1B">tech</text>
+    </g>
+  </g>
+</svg>
