@@ -511,6 +511,20 @@ a:hover {
   font-weight: 600;
 }
 
+/* Site logo image sizing (used when replacing textual brand with image) */
+.site-logo {
+  height: 44px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .site-logo {
+    height: 36px;
+  }
+}
+
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
 .navbar-b .dropdown.show .dropdown-menu,
 .navbar-b .dropdown-btn.show .dropdown-menu {
