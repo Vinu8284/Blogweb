@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Documentation</title>
+    <link rel="stylesheet" href="/frontend/styles.css"> <!-- Link to the same CSS file -->
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">VPTECH</div>
+        <ul id="nav-menu">
+            <li><a href="/backend/node.html">HTML</a></li>
+            <li><a href="/frontend/css.html">CSS</a></li>
+            <li><a href="/frontend/javscript.html">Javascript</a></li>
+            <li><a href="/frontend/react.html">React</a></li>
+            <li><a href="/frontend/nodejs.html">Node.js</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 id="introduction">Node.js Documentation</h1>
+
+        <!-- Introduction -->
+        <div class="section">
+            <h2>1. Introduction to Node.js</h2>
+            <p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side.</p>
+            <a href="https://nodejs.org/en/docs/">Learn More on Node.js Official Docs</a>
+        </div>
+
+        <!-- Installation -->
+        <div class="section">
+            <h2 id="installation">2. Installation</h2>
+            <p>To install Node.js, download it from the <a href="https://nodejs.org/">official website</a> or use a package manager like `nvm`.</p>
+            <pre>
+                <code># Using nvm
+nvm install node
+nvm use node</code>
+            </pre>
+        </div>
+
+        <!-- Basic Example -->
+        <div class="section">
+            <h2 id="basic-example">3. Basic Example</h2>
+            <p>Here is a simple example of a Node.js HTTP server:</p>
+            <pre>
+                <code>const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World!');
+});
+
+server.listen(3000, () => {
+    console.log('Server running at http://localhost:3000/');
+});</code>
+            </pre>
+        </div>
+
+        <!-- Modules -->
+        <div class="section">
+            <h2 id="modules">4. Modules</h2>
+            <p>Node.js has a module system. You can use built-in modules or create your own.</p>
+            <ul>
+                <li><a href="https://nodejs.org/api/fs.html">File System (fs)</a></li>
+                <li><a href="https://nodejs.org/api/http.html">HTTP</a></li>
+                <li><a href="https://nodejs.org/api/path.html">Path</a></li>
+                <li><a href="https://nodejs.org/api/os.html">OS</a></li>
+            </ul>
+        </div>
+
+        <!-- NPM -->
+        <div class="section">
+            <h2 id="npm">5. NPM (Node Package Manager)</h2>
+            <p>NPM is the default package manager for Node.js. It allows you to install and manage libraries.</p>
+            <pre>
+                <code># Install a package
+npm install express
+
+# Install a package globally
+npm install -g nodemon</code>
+            </pre>
+            <a href="https://www.npmjs.com/">Learn More on NPM</a>
+        </div>
+
+        <!-- Express.js -->
+        <div class="section">
+            <h2 id="express">6. Express.js</h2>
+            <p>Express.js is a popular web framework for Node.js.</p>
+            <pre>
+                <code>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello, Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Server running at http://localhost:3000/');
+});</code>
+            </pre>
+            <a href="https://expressjs.com/">Learn More on Express.js</a>
+        </div>
+
+        <!-- File Handling -->
+        <div class="section">
+            <h2 id="file-handling">7. File Handling</h2>
+            <p>Node.js provides the `fs` module for file handling.</p>
+            <pre>
+                <code>const fs = require('fs');
+
+// Write to a file
+fs.writeFileSync('example.txt', 'Hello, Node.js!');
+
+// Read from a file
+const data = fs.readFileSync('example.txt', 'utf8');
+console.log(data);</code>
+            </pre>
+        </div>
+
+        <!-- Asynchronous Programming -->
+        <div class="section">
+            <h2 id="async">8. Asynchronous Programming</h2>
+            <p>Node.js uses asynchronous programming with callbacks, promises, and async/await.</p>
+            <pre>
+                <code>// Using Promises
+const fs = require('fs').promises;
+
+async function readFile() {
+    try {
+        const data = await fs.readFile('example.txt', 'utf8');
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+readFile();</code>
+            </pre>
+        </div>
+
+        <!-- Debugging -->
+        <div class="section">
+            <h2 id="debugging">9. Debugging</h2>
+            <p>Use the built-in debugger or tools like `node --inspect` for debugging.</p>
+            <pre>
+                <code># Start debugging
+node --inspect app.js</code>
+            </pre>
+            <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Learn More on Debugging</a>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="section">
+            <h2 id="conclusion">10. Conclusion</h2>
+            <p>Node.js is a powerful runtime for building scalable and efficient server-side applications. Mastering it opens up endless possibilities in web development.</p>
+        </div>
+    </div>
+            <!-- Event Loop -->
+            <div class="section">
+                <h2 id="event-loop">11. Event Loop</h2>
+                <p>The event loop is a mechanism that allows Node.js to perform non-blocking I/O operations.</p>
+                <pre>
+                    <code>console.log('Start');
+    
+    setTimeout(() => {
+        console.log('Timeout');
+    }, 0);
+    
+    console.log('End');
+    
+    // Output:
+    // Start
+    // End
+    // Timeout</code>
+                </pre>
+                <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/">Learn More on Event Loop</a>
+            </div>
+    
+            <!-- Streams -->
+            <div class="section">
+                <h2 id="streams">12. Streams</h2>
+                <p>Streams are used to handle reading or writing data in chunks, making them efficient for large files.</p>
+                <pre>
+                    <code>const fs = require('fs');
+    
+    const readStream = fs.createReadStream('largeFile.txt', 'utf8');
+    readStream.on('data', chunk => {
+        console.log(chunk);
+    });</code>
+                </pre>
+                <a href="https://nodejs.org/api/stream.html">Learn More on Streams</a>
+            </div>
+    
+            <!-- Cluster Module -->
+            <div class="section">
+                <h2 id="cluster">13. Cluster Module</h2>
+                <p>The cluster module allows you to create child processes to utilize multiple CPU cores.</p>
+                <pre>
+                    <code>const cluster = require('cluster');
+    const http = require('http');
+    const os = require('os');
+    
+    if (cluster.isMaster) {
+        const numCPUs = os.cpus().length;
+        for (let i = 0; i < numCPUs; i++) {
+            cluster.fork();
+        }
+    } else {
+        http.createServer((req, res) => {
+            res.writeHead(200);
+            res.end('Hello, Cluster!');
+        }).listen(8000);
+    }</code>
+                </pre>
+                <a href="https://nodejs.org/api/cluster.html">Learn More on Cluster</a>
+            </div>
+    
+            <!-- Testing in Node.js -->
+            <div class="section">
+                <h2 id="testing">14. Testing in Node.js</h2>
+                <p>Testing is an essential part of Node.js development. Popular testing frameworks include Mocha and Jest.</p>
+                <pre>
+                    <code>// Example using Mocha
+    const assert = require('assert');
+    
+    describe('Array', () => {
+        it('should return -1 when the value is not present', () => {
+            assert.strictEqual([1, 2, 3].indexOf(4), -1);
+        });
+    });</code>
+                </pre>
+                <a href="https://mochajs.org/">Learn More on Mocha</a>
+            </div>
+    
+            <!-- Deployment -->
+            <div class="section">
+                <h2 id="deployment">15. Deployment</h2>
+                <p>Node.js applications can be deployed using platforms like Heroku, AWS, or Docker.</p>
+                <pre>
+                    <code># Example: Deploying with Docker
+    # Dockerfile
+    FROM node:14
+    WORKDIR /app
+    COPY package*.json ./
+    RUN npm install
+    COPY . .
+    CMD ["node", "app.js"]
+    EXPOSE 3000</code>
+                </pre>
+                <a href="https://nodejs.org/en/docs/guides/nodejs-docker-webapp/">Learn More on Deployment</a>
+            </div>
+
+                    <!-- Download PDF -->
+        <div class="section">
+            <h2 id="download">11. Download PDF</h2>
+            <p>You can download this documentation as a PDF for offline use.</p>
+            <a href="/frontend/html-documentation.pdf" download>
+                <button>Download PDF</button>
+            </a>
+        </div>
+    <!-- Script for Mobile Menu Toggle -->
+    <script src="/frontend/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Documentation</title>
+    <link rel="stylesheet" href="/frontend/styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">VPTECH</div>
+      <ul id="nav-menu">
+        <li><a href="/frontend/html.html">HTML</a></li>
+        <li><a href="/frontend/css.html">CSS</a></li>
+        <li><a href="/frontend/javscript.html">Javascript</a></li>
+        <li><a href="/frontend/react.html">React</a></li>
+        <li><a href="/java/java.html">Java</a></li>
+        <li><a href="/DSA/dsa.html">DSA</a></li>
+        <li><a href="/interview/interview.html">Interview</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="container">
+      <h1>Java Documentation</h1>
+
+      <div class="section">
+        <h2>1. Introduction to Java</h2>
+        <p>
+          Java is a high-level, class-based, object-oriented programming
+          language designed to have as few implementation dependencies as
+          possible. It runs on the Java Virtual Machine (JVM), which makes it
+          platform independent.
+        </p>
+        <a href="https://docs.oracle.com/en/java/">Learn More on Oracle Docs</a>
+      </div>
+
+      <div class="section">
+        <h2>2. Setting up Java</h2>
+        <ul>
+          <li>Install JDK (OpenJDK or Oracle JDK)</li>
+          <li>Set JAVA_HOME and add <code class="property">bin</code> to PATH</li>
+          <li>Use build tools: Maven or Gradle for projects</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>3. Core Concepts</h2>
+        <ul>
+          <li>Object-Oriented Programming: classes, objects, inheritance, polymorphism</li>
+          <li>Primitive types and reference types</li>
+          <li>Exception handling with <code>try/catch/finally</code></li>
+          <li>Collections framework (List, Set, Map, Queue)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>4. Concurrency</h2>
+        <p>
+          Java provides threading support via <code class="property">Thread</code> and higher-level
+          concurrency utilities in <code class="property">java.util.concurrent</code>.
+        </p>
+        <pre><code>
+// Simple thread example
+public class HelloThread extends Thread {
+    public void run() {
+        System.out.println("Hello from a thread");
+    }
+}
+        </code></pre>
+      </div>
+
+      <div class="section">
+        <h2>5. Common APIs & Tools</h2>
+        <ul>
+          <li>Streams & Lambdas (Java 8+)</li>
+          <li>JDBC for database access</li>
+          <li>Build tools: Maven / Gradle</li>
+          <li>Testing: JUnit</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>6. Resources</h2>
+        <ul>
+          <li><a href="https://docs.oracle.com/en/java/">Official Java Docs</a></li>
+          <li><a href="https://www.baeldung.com/">Baeldung (tutorials)</a></li>
+          <li><a href="https://www.geeksforgeeks.org/java/">GeeksforGeeks Java</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/frontend/script1.js"></script>
+  </body>
+</html>

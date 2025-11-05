@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Contact Form Submission
   const contactForm = document.querySelector("form.contactForm");
   if (contactForm) {
+    const googleScriptURL = "https://script.google.com/macros/s/AKfycbyR4Spg_vp_zcCKz__y9mtCuCtc-oMJQdYnZcSolMan_aCD_oHJokiz-7bJopxKCFO-/exec"; 
+
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent default form submission
 
@@ -69,14 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (ferror) return false;
 
-      // Serialize Form Data
-      const formData = new FormData(this);
-      const action = this.getAttribute("action") || "contactform/contactform.php";
+      // Prepare data for Google Script
+      const formData = {
+        name: this.querySelector('input[name="name"]').value,
+        email: this.querySelector('input[name="email"]').value,
+        message: this.querySelector('textarea[name="message"]').value,
+      };
 
-      // Submit Form via AJAX
-      fetch(action, {
+      fetch(googleScriptURL, {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
       })
         .then((response) => response.text())
         .then((msg) => {
@@ -86,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (msg === "OK") {
             sendMessage.classList.add("show");
             errorMessage.classList.remove("show");
+            sendMessage.textContent = "Message sent successfully! I will reach out to you soon."; // Custom success message
             this.reset(); // Clear form inputs
           } else {
             sendMessage.classList.remove("show");

@@ -1,5 +1,3 @@
-
-
 body {
   background: linear-gradient(135deg, #f7f7fa, #f0e7d7);
   color: #131313;
@@ -147,7 +145,7 @@ a:hover {
 }
 
 .subtitle-a {
-  color: #4e4e4e;
+  color: #222; /* Darker for better contrast */
 }
 
 .line-mf {
@@ -210,12 +208,17 @@ a:hover {
   line-height: 1.4;
   margin: 0 15px 0 0;
   box-shadow: 0 0 0 3px #0078ff;
+  background-color: #fff;      /* Added: white background for better icon visibility */
+  color: #0078ff;              /* Added: blue icon color for contrast */
+  display: flex;               /* Center icon vertically and horizontally */
+  align-items: center;
+  justify-content: center;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
-  color: #fff;
+  background-color: #0078ff;   /* Blue background on hover */
+  color: #fff;                 /* White icon on hover */
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
 }
@@ -719,6 +722,7 @@ a:hover {
   margin-bottom: 30px;
   text-align: center;
   padding: 30px;
+  color: #222; /* Ensure dark text on white background */
 }
 
 .service-box:hover {
@@ -741,7 +745,7 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: #5fa3ec;
+  background-color: #0056b3; /* Darker blue for better contrast */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -751,7 +755,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #003d80; /* Even darker on hover */
+  color: #fff;
 }
 /*======================================
 //--//-->   COUNTER
@@ -927,7 +932,7 @@ a:hover {
 }
 
 .card-blog .card-description {
-  color: #faf7f7;
+  color: #222; /* Blog card description for better readability */
 }
 
 .card-blog .post-author {
@@ -986,6 +991,9 @@ a:hover {
 }
 .getouch{
   color: white;
+  background-color: #0078ff; /* Add background for contrast */
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 /*------/ Comments /------*/
@@ -1069,7 +1077,7 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #75dc86;
+  background-color: #0078ff; /* Blue for better contrast */
   padding: .2rem .6rem;
   margin-bottom: .5rem;
   border-radius: 15px;

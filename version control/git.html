@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control Documentation</title>
+    <link rel="stylesheet" href="/frontend/styles.css"> 
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">VPTECH</div>
+        <ul id="nav-menu">
+            <li><a href="/version control/git.html">Github</a></li>
+         
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1 id="introduction">Version Control Documentation</h1>
+
+        <!-- Introduction -->
+        <div class="section">
+            <h2>1. Introduction to Version Control</h2>
+            <p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. It is essential for collaborative software development.</p>
+            <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Learn More</a>
+        </div>
+
+        <!-- Types of Version Control -->
+        <div class="section">
+            <h2 id="types">2. Types of Version Control</h2>
+            <ul>
+                <li><strong>Local Version Control:</strong> Tracks changes on a single machine.</li>
+                <li><strong>Centralized Version Control:</strong> Uses a central server to store all versions (e.g., SVN).</li>
+                <li><strong>Distributed Version Control:</strong> Each user has a full copy of the repository (e.g., Git).</li>
+            </ul>
+        </div>
+
+        <!-- Git Basics -->
+        <div class="section">
+            <h2 id="git-basics">3. Git Basics</h2>
+            <p>Git is the most popular distributed version control system. Below are some basic commands:</p>
+            <pre>
+                <code># Initialize a repository
+git init
+
+# Clone a repository
+git clone <repository-url>
+
+# Check the status of your repository
+git status
+
+# Add files to staging
+git add <file-name>
+
+# Commit changes
+git commit -m "Commit message"</code>
+            </pre>
+            <a href="https://git-scm.com/doc">Learn More on Git</a>
+        </div>
+
+        <!-- Branching -->
+        <div class="section">
+            <h2 id="branching">4. Branching</h2>
+            <p>Branches allow you to work on different features or fixes independently.</p>
+            <pre>
+                <code># Create a new branch
+git branch <branch-name>
+
+# Switch to a branch
+git checkout <branch-name>
+
+# Create and switch to a branch
+git checkout -b <branch-name>
+
+# Merge a branch
+git merge <branch-name></code>
+            </pre>
+        </div>
+
+        <!-- Collaboration -->
+        <div class="section">
+            <h2 id="collaboration">5. Collaboration</h2>
+            <p>Collaboration in Git is done using remote repositories like GitHub, GitLab, or Bitbucket.</p>
+            <pre>
+                <code># Add a remote repository
+git remote add origin <repository-url>
+
+# Push changes to the remote repository
+git push origin <branch-name>
+
+# Pull changes from the remote repository
+git pull origin <branch-name></code>
+            </pre>
+        </div>
+
+        <!-- Resolving Conflicts -->
+        <div class="section">
+            <h2 id="conflicts">6. Resolving Conflicts</h2>
+            <p>Conflicts occur when changes from different branches overlap. Git will notify you of conflicts during a merge.</p>
+            <pre>
+                <code># Steps to resolve conflicts
+# 1. Open the conflicting file and resolve the conflict manually.
+# 2. Add the resolved file to staging.
+git add <file-name>
+
+# 3. Commit the changes.
+git commit -m "Resolved conflict"</code>
+            </pre>
+        </div>
+
+        <!-- Advanced Git Commands -->
+        <div class="section">
+            <h2 id="advanced">7. Advanced Git Commands</h2>
+            <p>Here are some advanced Git commands:</p>
+            <pre>
+                <code># View commit history
+git log
+
+# Revert a commit
+git revert <commit-hash>
+
+# Reset to a previous commit
+git reset --hard <commit-hash>
+
+# Stash changes
+git stash
+git stash apply</code>
+            </pre>
+        </div>
+
+        <!-- Git Hooks -->
+        <div class="section">
+            <h2 id="hooks">8. Git Hooks</h2>
+            <p>Git hooks are scripts that run automatically before or after certain Git events.</p>
+            <pre>
+                <code># Example: Pre-commit hook
+#!/bin/sh
+# Check for linting errors
+npm run lint</code>
+            </pre>
+            <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Learn More on Git Hooks</a>
+        </div>
+
+        <!-- Version Control Best Practices -->
+        <div class="section">
+            <h2 id="best-practices">9. Best Practices</h2>
+            <ul>
+                <li>Commit often with meaningful messages.</li>
+                <li>Use branches for features and fixes.</li>
+                <li>Pull changes from the remote repository frequently.</li>
+                <li>Resolve conflicts as soon as they arise.</li>
+            </ul>
+        </div>
+
+        <!-- Tools for Version Control -->
+        <div class="section">
+            <h2 id="tools">10. Tools for Version Control</h2>
+            <ul>
+                <li><a href="https://git-scm.com/">Git</a></li>
+                <li><a href="https://subversion.apache.org/">Subversion (SVN)</a></li>
+                <li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://gitlab.com/">GitLab</a></li>
+                <li><a href="https://bitbucket.org/">Bitbucket</a></li>
+            </ul>
+        </div>
+
+        <!-- Download PDF -->
+        <div class="section">
+            <a href="/backend/version-control-documentation.pdf" download>
+                <button>Download PDF</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script src="/frontend/script1.js"></script>
+</body>
+</html>
